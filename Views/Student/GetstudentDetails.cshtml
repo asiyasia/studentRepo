@@ -1,0 +1,61 @@
+﻿@using StudentProject.Models
+@model List<StudentModel>
+@{
+    ViewBag.Title = "GetstudentDetails";
+}
+
+<h2>GetstudentDetails</h2>
+<body>
+    <div>
+        <table>
+            <tr>
+                <th>
+                    StudentId
+                </th>
+                <th>
+                    StudentName
+                </th>
+                <th>
+                    StudentEmail
+                </th>
+                <th>
+                    StudentMobile
+                </th>
+                <th>
+                    StudentAge
+                </th>
+            </tr>
+
+
+        </table>
+
+    </div>
+@{ 
+    List<StudentModel> student = Model;
+    foreach(StudentProject.Models.StudentModel p in student)
+            {
+        <table>
+            <tr>
+                <td>
+                    @p.StudentId
+                </td>
+                <td>
+                    @p.StudentName
+                </td>
+                <td>
+                    @p.StudentEmail
+                </td>
+                <td>
+                    @p.StudentMobile
+                </td>
+                <td>
+                    @p.StudentAge
+                </td>
+            </tr>
+        </table>
+            }
+    @Html.ActionLink("Ins_Update_Delete_search", "Ins_Update_Delete_search")
+}
+
+</body>
+

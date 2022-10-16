@@ -1,0 +1,35 @@
+﻿@using StudentProject.Models
+@model StudentProject.Models.StudentModel
+@{
+    ViewBag.Title = "InsStudentDetails";
+}
+
+<h2>InsStudentDetails</h2>
+
+<div>
+    @using (Html.BeginForm())
+    {
+        @Html.LabelFor(x => x.StudentId)
+        @Html.TextBoxFor(x => x.StudentId)
+        <br />
+        @Html.LabelFor(y => y.StudentName)
+        @Html.TextBoxFor(y => y.StudentName)
+        <br />
+        @Html.LabelFor(a => a.StudentEmail)
+        @Html.TextBoxFor(a => a.StudentEmail)
+        <br />
+        @Html.LabelFor(b => b.StudentMobile)
+        @Html.TextBoxFor(b => b.StudentMobile)
+        <br />
+        @Html.LabelFor(c => c.StudentAge)
+        @Html.TextBoxFor(c => c.StudentAge)
+        <br />
+
+        <input type="button" id="insbtn" name="x" value="insert" />
+        <input type="button" id="updatebtn" name="x" value="update" />
+        <input type="button" id="deletebtn" name="x" value="delete" />
+
+
+    }
+</div>
+
